@@ -28,7 +28,7 @@ class _TrafficInfoScreenState extends State<TrafficInfoScreen> {
 
   Future<Map<String, dynamic>> getAddressCoordinates(String address) async {
   final response = await http.get(Uri.parse(
-      'https://maps.googleapis.com/maps/api/geocode/json?address=$address&key=AIzaSyCk0ra3iY5CWVikjlnCMdWBHiqd5QUWGOk'));
+      'https://maps.googleapis.com/maps/api/geocode/json?address=$address&key=${config.mapsKey}'));
 
   if (response.statusCode == 200) {
     Map<String, dynamic> data = jsonDecode(response.body);
