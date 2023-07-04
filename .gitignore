@@ -1,4 +1,9 @@
+# Ignore everything
 *
+
+# But don't ignore .gitignore file itself
 !.gitignore
+
+# Don't ignore these specific files
 !main.dart
 !traffic_screen.dart
